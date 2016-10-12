@@ -23,7 +23,7 @@ public class Vakacio {
 
         IskolaiSzunet[] szunetek = new IskolaiSzunet[5];
         szunetek[0] = new IskolaiSzunet("Tavaszi szünet", 2017, 4, 13, 2017, 4, 18);
-        szunetek[1] = new IskolaiSzunet("Nyári szünet", 2017, 6, 16, 2017, 9, 4);
+        szunetek[1] = new IskolaiSzunet("Nyári szünet", 2017, 6, 17, 2017, 9, 4);
         szunetek[2] = new IskolaiSzunet("Téli szünet",2016, 12, 22, 2017, 1, 2 );
         szunetek[3] = new IskolaiSzunet("Őszi szünet", 2016, 10, 29, 2016, 11, 6);
         szunetek[4] = new IskolaiSzunet("Síszünet", 2017, 2, 20, 2017, 2, 22 );
@@ -44,7 +44,7 @@ public class Vakacio {
         szunetKezdet[3] = cal3;
         szunetKezdet[4] = cal4;
         for (int i = 0; i < szunetKezdet.length; i++) {
-            szunetKezdet[i].set(szunetek[i].getKezdetEv(), szunetek[i].getKezdetHo()-1, szunetek[i].getKezdezNap()+1);
+            szunetKezdet[i].set(szunetek[i].getKezdetEv(), szunetek[i].getKezdetHo()-1, szunetek[i].getKezdezNap());
             }
         Calendar[] szunetVeg  = new Calendar[5];
         Calendar cal5 = Calendar.getInstance();
@@ -74,7 +74,7 @@ public class Vakacio {
          }
         long temp = (tempIdo.getTimeInMillis() - mai.getTimeInMillis())/1000/60/60/24;
         if (temp > 0){
-        System.out.println("A következő iskolaszünet "+ temp +" nap múlva lesz");
+        System.out.println("A következő iskolaszünet a 2016-17 tanévben "+ temp +" nap múlva lesz");
         }
         Scanner sc = new Scanner(System.in) ;
         System.out.println("Milyen dátumtól számoljak? Év: ");
